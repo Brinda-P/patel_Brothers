@@ -188,6 +188,40 @@ Container PaymentDetail() {
   );
 }
 
+Container PaceOrderDeatil(){
+  return Container(
+    padding: EdgeInsets.all(10),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Payable Amount'),
+            Text('₹ 2,207')
+          ],
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 30),
+          decoration: BoxDecoration(
+            color: AppColors.THEME_COLOR,
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child:
+          TextButton(
+            onPressed: () {
+              Get.toNamed('/deliverypage');
+            },
+            child: Text('Place Order', style: TextStyle(color: Colors.white),)
+          )
+
+        )
+      ],
+    ),
+  );
+}
+
 class CartItemDetail{
   late String ItemName;
   late String Price;

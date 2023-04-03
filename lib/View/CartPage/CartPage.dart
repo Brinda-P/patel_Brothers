@@ -35,7 +35,8 @@ class _CartPageState extends State<CartPage> {
                     cartitem(),
                     BuildTopOffers(),
                     CouponDetail(),
-                    PaymentDetail()
+                    PaymentDetail(),
+                    PaceOrderDeatil()
                   ],
               )
             ],
