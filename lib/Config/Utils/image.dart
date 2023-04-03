@@ -36,6 +36,14 @@ String WOMENTSHIRT4 = 'assets/images/WomenTshirt4.png';
 String MENJACKET = 'assets/images/menjacket.png';
 String WOMENKURTA = 'assets/images/womenkurta.png';
 String DOVESHAMPOO = 'assets/images/doveshampoo.png';
+String HAIRCARE = 'assets/images/haircare.png';
+String HANDWASH = 'assets/images/handwash.png';
+
+String DOVE1 = 'assets/images/dove1.png';
+String DOVE2 = 'assets/images/dove2.png';
+String DOVE3 = 'assets/images/dove3.png';
+String DOVE4 = 'assets/images/dove4.png';
+String DOVE5 = 'assets/images/dove5.png';
 
 
 String Nike_logo = 'assets/images/nike_logo.png';

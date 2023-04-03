@@ -207,9 +207,14 @@ Container BuildTopOffers(){
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               _Heading('Top Offers'),
-              Text('View All',
-                style: TextStyle(
-                  fontSize: 10,
+              InkWell(
+                onTap: () {
+                  Get.toNamed('/offerpage');
+                },
+                child: Text('View All',
+                  style: TextStyle(
+                    fontSize: 10,
+                  ),
                 ),
               )
             ],
