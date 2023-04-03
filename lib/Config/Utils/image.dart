@@ -33,6 +33,9 @@ String WOMENTSHIRT = 'assets/images/WomenTshirt.png';
 String WOMENTSHIRT2 = 'assets/images/WomenTshirt2.png';
 String WOMENTSHIRT3 = 'assets/images/WomenTshirt3.png';
 String WOMENTSHIRT4 = 'assets/images/WomenTshirt4.png';
+String MENJACKET = 'assets/images/menjacket.png';
+String WOMENKURTA = 'assets/images/womenkurta.png';
+String DOVESHAMPOO = 'assets/images/doveshampoo.png';
 
 
 String Nike_logo = 'assets/images/nike_logo.png';

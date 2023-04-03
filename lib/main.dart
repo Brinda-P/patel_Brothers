@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:patel_brothers/Config/Utils/color.dart';
-import 'package:patel_brothers/View/HomePage/CartPage/CartPage.dart';
+import 'package:patel_brothers/View/CartPage/CartPage.dart';
 import 'package:patel_brothers/View/HomePage/homepage.dart';
 import 'package:patel_brothers/View/ItemPage/ApparelPage.dart';
 import 'package:patel_brothers/View/ItemPage/OfferItemPage.dart';

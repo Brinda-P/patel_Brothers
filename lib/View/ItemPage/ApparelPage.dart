@@ -31,7 +31,7 @@ class _ApparelPageState extends State<ApparelPage> {
               ItemImage(MENTSHIRT),
               PriceDetails(),
               SizedBox(height: 10),
-              StockDetails(),
+              OtherStockDetails(),
               OffersDetails(),
               ItemDesc(),
               ItemDetails(),

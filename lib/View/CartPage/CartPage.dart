@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:patel_brothers/Config/Utils/color.dart';
 import 'package:patel_brothers/Controller/Appbar.dart';
 import 'package:patel_brothers/Controller/CartController/CartController.dart';
 import 'package:patel_brothers/Controller/HomeController/HomePageController.dart';
-import 'package:patel_brothers/Controller/ItemController/ItemDetailController.dart';
+import 'package:get/get.dart';
+
 
 class CartPage extends StatefulWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -31,7 +33,9 @@ class _CartPageState extends State<CartPage> {
               Column(
                   children: [
                     cartitem(),
-                    BuildTopOffers()
+                    BuildTopOffers(),
+                    CouponDetail(),
+                    PaymentDetail()
                   ],
               )
             ],
@@ -41,3 +45,5 @@ class _CartPageState extends State<CartPage> {
     );
   }
 }
+
+

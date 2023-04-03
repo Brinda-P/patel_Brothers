@@ -224,7 +224,12 @@ Container ItemDesc() {
         Text("Looking after your skin's health is of utmost importance because extra efforts always shows, even on your skin. That's why you should pay extra attention to what you choose for your skin. Presenting New Vaseline Revitalizing Green Tea Body Lotion, specially formulated with 100% Pure Green...",
             style: TextStyle(fontSize: 10, color: Colors.grey)),
         SizedBox(height: 5),
-        Text('KNOW MORE',style: TextStyle(color: Colors.red,fontSize: 10))
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text('KNOW MORE',style: TextStyle(color: Colors.red,fontSize: 10)),
+          ],
+        )
       ],
     ),
   );
@@ -254,7 +259,12 @@ Container ItemDetails() {
         Text('Refreshes your skin',
             style: TextStyle(fontWeight: FontWeight.w500)),
         SizedBox(height: 5),
-        Text('KNOW MORE',style: TextStyle(color: Colors.red,fontSize: 10))
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text('KNOW MORE',style: TextStyle(color: Colors.red,fontSize: 10)),
+          ],
+        )
       ],
     ),
   );
@@ -284,7 +294,12 @@ Container ItemInfo() {
         Text('Manufacturer',
             style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10)),
         SizedBox(height: 5),
-        Text('SEE MORE',style: TextStyle(color: Colors.red, fontSize: 10))
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text('KNOW MORE',style: TextStyle(color: Colors.red,fontSize: 10)),
+          ],
+        )
       ],
     ),
   );
@@ -329,6 +344,89 @@ Container ItemRating() {
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(5)),
           child: Text('WRITE REVIEW'),
         )
+      ],
+    ),
+  );
+}
+
+Container OtherStockDetails() {
+  return Container(
+    margin: EdgeInsets.symmetric(vertical: 5),
+    padding: EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10),
+      color: Colors.grey[200],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Colour : Black',
+            style: TextStyle(fontWeight: FontWeight.w600)),
+        SizedBox(height: 10),
+        Row(
+          children: [
+            Icon(Icons.circle, color: Colors.black ),
+            Icon(Icons.circle, color: Colors.redAccent ),
+            Icon(Icons.circle, color: Colors.orangeAccent )
+          ],
+        ),
+        SizedBox(height: 10),
+        Text('Size  :  XL',
+            style: TextStyle(fontWeight: FontWeight.w600)),
+        SizedBox(height: 10),
+        Row(
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 5),
+              padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+                decoration: BoxDecoration(borderRadius : BorderRadius.circular(10),color: Colors.grey[400]),
+                child: Text('M')
+            ),
+            Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+                decoration: BoxDecoration(borderRadius : BorderRadius.circular(10),color: Colors.grey[400]),
+                child: Text('L')
+            ),
+            Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+                decoration: BoxDecoration(borderRadius : BorderRadius.circular(10),color:AppColors.THEME_COLOR),
+                child: Text('XL', style: TextStyle(color: Colors.white),)
+            ),
+            Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+                decoration: BoxDecoration(borderRadius : BorderRadius.circular(10),color: Colors.grey[400]),
+                child: Text('XXL')
+            ),
+          ],
+        ),
+        SizedBox(height: 10),
+        Text('In Stock',
+            style: TextStyle(color: Colors.green, fontSize: 12, fontWeight: FontWeight.w600)),
+        Row(
+          children: [
+            Text('Sold by',
+                style: TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.w400)),
+            SizedBox(width: 5),
+            Text('Patel Brother`s',
+                style: TextStyle(color: Colors.red[900])),
+          ],
+        ),
+        Text('Delivery',
+            style: TextStyle(fontWeight: FontWeight.w600)),
+        TextField(
+          decoration: InputDecoration(
+            prefixIcon: Icon(Icons.location_on),
+            hintText: '364001',
+            suffix: Text('CHECK', style: TextStyle(color: Colors.red[900]),),
+          ),
+        ),
+        SizedBox(height: 5),
+        Text('Check for estimated delivery date',
+            style: TextStyle(fontSize: 10, color: Colors.grey)),
+
       ],
     ),
   );
