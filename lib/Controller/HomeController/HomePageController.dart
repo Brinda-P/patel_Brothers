@@ -197,7 +197,7 @@ Container BuildSaleSlider(){
 
 Container BuildTopOffers(){
   return Container(
-    height: 310.h,
+    height: 305.h,
     child: Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
@@ -286,10 +286,11 @@ Container BuildTopOffers(){
                               ),
                             ),
                             Container(
-                              width: MediaQuery.of(context).size.width/2.3,
+                              width: MediaQuery.of(context).size.width/2.1,
                               padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
-                                  color: Colors.green[900]
+                                  color: Colors.green[900],
+                                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight: Radius.circular(10))
                               ),
                               child: Row(
                                 mainAxisAlignment : MainAxisAlignment.center,

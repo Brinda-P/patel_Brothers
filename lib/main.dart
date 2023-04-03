@@ -5,6 +5,7 @@ import 'package:patel_brothers/View/CartPage/CartPage.dart';
 import 'package:patel_brothers/View/HomePage/homepage.dart';
 import 'package:patel_brothers/View/ItemPage/ApparelPage.dart';
 import 'package:patel_brothers/View/ItemPage/OfferItemPage.dart';
+import 'package:patel_brothers/View/OfferPage/OfferPage.dart';
 
 
 void main() {
@@ -20,6 +21,7 @@ void main() {
       GetPage(name: '/offeritem', page: () => OfferItemPage(),),
       GetPage(name: '/apparelpage', page: () => ApparelPage(),),
       GetPage(name: '/cartpage', page: () => CartPage(),),
+      GetPage(name: '/offerpage', page: () => offerpage(),),
     ],
   ));
 }
