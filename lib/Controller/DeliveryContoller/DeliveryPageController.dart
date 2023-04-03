@@ -22,7 +22,7 @@ Container AddressDetail(){
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('YASH GOSWAMI',style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),),
+                  Text('YASH GOSWAMI',style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),),
                   SizedBox(height: 10),
                   Text('Plote No. 115, Sardar Patel Society,\nVictoria park road, Jewel’s Cricle.\nBhavnagar - 364001, Gujarat.\n+91 - 9876543210'),
                   SizedBox(height: 10,),
@@ -34,13 +34,18 @@ Container AddressDetail(){
                     ),
                     child: Text('Default Address', style: TextStyle(color: Colors.white),),
                   )
-
                 ],
-              )
+              ),
             ],
           ),
         ),
-
+        Container(
+          padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: AppColors.THEME_COLOR,
+              borderRadius: BorderRadius.circular(10)
+            ),
+            child: Center(child: Text('Change / Add Address', style: TextStyle(color: Colors.white),)))
       ],
     ),
   );

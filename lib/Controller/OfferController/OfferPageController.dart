@@ -114,7 +114,7 @@ Container OfferItems() {
                           ),
                           SizedBox(width: 10),
                           Text(
-                            ItemList[index].MRP,
+                            'M.R.P. ${ItemList[index].MRP}',
                             style: TextStyle(
                                 color: Colors.grey,
                                 fontSize: 8,
@@ -123,7 +123,7 @@ Container OfferItems() {
                         ],
                       ),
                       Text(
-                        ItemList[index].SavePrice,
+                        'Save Price : ${ItemList[index].SavePrice}',
                         style: TextStyle(
                             fontSize: 8, color: AppColors.THEME_COLOR),
                       ),
