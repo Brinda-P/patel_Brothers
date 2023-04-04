@@ -20,7 +20,7 @@ class _SalePageState extends State<SalePage> {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              ItemImage(WOMENTSHIRT),
+              ImageSlider(WOMENTSHIRT),
               OffersDetails(),
               ItemDesc(),
               ItemDetails(),

@@ -72,7 +72,7 @@ ListView OfferItems() {
       return badges.Badge(
         badgeContent: Text('50% \n off' ,
           style: TextStyle(color: Colors.white, fontSize: 10,fontWeight: FontWeight.w700),),
-        position: badges.BadgePosition.topStart(start: -2,top: 1),
+        position: badges.BadgePosition.topStart(start: 5,top: 1),
         badgeStyle: badges.BadgeStyle(
             padding: EdgeInsets.all(8),
             shape : badges.BadgeShape.instagram),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:patel_brothers/Config/Helper/SizeConfig.dart';
 import 'package:patel_brothers/Config/Utils/color.dart';
 import '../../Config/Utils/image.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 Container ItemImage(String image){
   return Container(
@@ -15,27 +17,22 @@ Container ItemImage(String image){
       badgeStyle: badges.BadgeStyle(
           padding: EdgeInsets.all(10),
           shape : badges.BadgeShape.instagram),
-      child: CarouselSlider(
-        options: CarouselOptions(
-          height: 300.w,
-          //autoPlay: true,
-          //autoPlayInterval: Duration(seconds: 3),
-        ),
-        items: [1,2,3,4,5].map((i) {
-          return Builder(
-            builder: (BuildContext context) {
-              return Container(
-                  //width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  child: Image.asset(image,
-                    fit: BoxFit.fill,)
-              );
-            },
-          );
-        }).toList(),
-      ),
+      child: ImageSlider(image)
     ),
   );
+}
+
+ImageSlideshow ImageSlider(String PImage) {
+   return ImageSlideshow(
+        height: 425,
+        indicatorColor: Colors.red,
+        children: [
+        Image.asset(PImage, fit: BoxFit.fill),
+        Image.asset(PImage, fit: BoxFit.fill),
+        Image.asset(PImage, fit: BoxFit.fill),
+        Image.asset(PImage, fit: BoxFit.fill),
+    ]);
+
 }
 
 Container PriceDetails() {
