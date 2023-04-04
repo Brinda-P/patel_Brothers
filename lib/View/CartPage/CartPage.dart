@@ -23,20 +23,14 @@ class _CartPageState extends State<CartPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Cart (3 items)'),
-                  Text('₹ 2,207.00', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),)
-                ],
-              ),
               Column(
                   children: [
-                    cartitem(),
+                    CartTotal(),
+                    cartitem('CartPage'),
                     BuildTopOffers(),
                     CouponDetail(),
                     PaymentDetail(),
-                    PaceOrderDeatil()
+                    PlaceOrderMakePayment('PlaceOrder'),
                   ],
               )
             ],

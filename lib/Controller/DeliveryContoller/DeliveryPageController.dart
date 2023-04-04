@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:patel_brothers/Config/Utils/color.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Container AddressDetail(){
   return Container(
@@ -45,7 +46,18 @@ Container AddressDetail(){
               color: AppColors.THEME_COLOR,
               borderRadius: BorderRadius.circular(10)
             ),
-            child: Center(child: Text('Change / Add Address', style: TextStyle(color: Colors.white),)))
+            child: Center(child: Text('Change / Add Address', style: TextStyle(color: Colors.white),))),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              FaIcon(FontAwesomeIcons.whatsappSquare, color: Colors.green, size: 35),
+              Text('Enable order updates and impotant information on \nWhatsapp', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400)),
+              Icon(Icons.check_box_rounded, color: AppColors.THEME_COLOR, size: 30)
+            ],
+          ),
+        )
       ],
     ),
   );

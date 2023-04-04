@@ -186,7 +186,9 @@ Container BuildSaleSlider(){
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          Image.asset(SALE1),
+          InkWell( onTap: () {
+            Get.toNamed('/SalePage');
+          }, child: Image.asset(SALE1)),
           SizedBox(width: 10),
           Image.asset(SALE2),
         ],
