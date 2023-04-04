@@ -197,6 +197,7 @@ Container BuildSaleSlider(){
   );
 }
 
+
 Container BuildTopOffers(){
   return Container(
     height: 305.h,
@@ -256,8 +257,7 @@ Container BuildTopOffers(){
                               width: 164,
                             ),
                             SizedBox(height: 5),
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
+                            Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

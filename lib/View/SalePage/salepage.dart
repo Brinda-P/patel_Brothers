@@ -21,6 +21,7 @@ class _SalePageState extends State<SalePage> {
           child: Column(
             children: [
               ImageSlider(WOMENTSHIRT),
+              TShirtStockDetails(),
               OffersDetails(),
               ItemDesc(),
               ItemDetails(),

@@ -6,7 +6,6 @@ import '../../Config/Utils/image.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 Container ItemImage(String image){
   return Container(
@@ -23,6 +22,7 @@ Container ItemImage(String image){
 }
 
 ImageSlideshow ImageSlider(String PImage) {
+
    return ImageSlideshow(
         height: 425,
         indicatorColor: Colors.red,
@@ -346,6 +346,15 @@ Container ItemRating() {
   );
 }
 
+Container SizeContainer(String size, bool isSelected ){
+  return Container(
+      margin: EdgeInsets.symmetric(horizontal: 5),
+      padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+      decoration: BoxDecoration(borderRadius : BorderRadius.circular(10), color: isSelected ? AppColors.THEME_COLOR: Colors.grey[400]),
+      child: Text(size, style: TextStyle(color: isSelected ? Colors.white : Colors.black),)
+  );
+}
+
 Container OtherStockDetails() {
   return Container(
     margin: EdgeInsets.symmetric(vertical: 5),
@@ -373,30 +382,10 @@ Container OtherStockDetails() {
         SizedBox(height: 10),
         Row(
           children: [
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 5),
-              padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
-                decoration: BoxDecoration(borderRadius : BorderRadius.circular(10),color: Colors.grey[400]),
-                child: Text('M')
-            ),
-            Container(
-                margin: EdgeInsets.symmetric(horizontal: 5),
-                padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
-                decoration: BoxDecoration(borderRadius : BorderRadius.circular(10),color: Colors.grey[400]),
-                child: Text('L')
-            ),
-            Container(
-                margin: EdgeInsets.symmetric(horizontal: 5),
-                padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
-                decoration: BoxDecoration(borderRadius : BorderRadius.circular(10),color:AppColors.THEME_COLOR),
-                child: Text('XL', style: TextStyle(color: Colors.white),)
-            ),
-            Container(
-                margin: EdgeInsets.symmetric(horizontal: 5),
-                padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
-                decoration: BoxDecoration(borderRadius : BorderRadius.circular(10),color: Colors.grey[400]),
-                child: Text('XXL')
-            ),
+            SizeContainer('M', false),
+            SizeContainer('L', false),
+            SizeContainer('XL', true),
+            SizeContainer('XXL', false),
           ],
         ),
         SizedBox(height: 10),
@@ -407,7 +396,78 @@ Container OtherStockDetails() {
             Text('Sold by',
                 style: TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.w400)),
             SizedBox(width: 5),
-            Text('Patel Brother`s',
+            Text("Patel Brother's",
+                style: TextStyle(color: Colors.red[900])),
+          ],
+        ),
+        Text('Delivery',
+            style: TextStyle(fontWeight: FontWeight.w600)),
+        TextField(
+          decoration: InputDecoration(
+            prefixIcon: Icon(Icons.location_on),
+            hintText: '364001',
+            suffix: Text('CHECK', style: TextStyle(color: Colors.red[900]),),
+          ),
+        ),
+        SizedBox(height: 5),
+        Text('Check for estimated delivery date',
+            style: TextStyle(fontSize: 10, color: Colors.grey)),
+
+      ],
+    ),
+  );
+}
+
+
+Container TShirtStockDetails() {
+  return Container(
+    margin: EdgeInsets.symmetric(vertical: 5),
+    padding: EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10),
+      color: Colors.grey[200],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('SASSAFRAS \nWomen Black Ribbed T-shirt',
+            style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12)),
+        SizedBox(height: 10),
+        Row(
+          children: [
+            Text('Colour : Black',
+                style: TextStyle(fontWeight: FontWeight.w600)),
+            SizedBox(width: 10),
+            Image.asset(WOMENTSHIRT, height: 56, width: 42),
+            SizedBox(width: 10),
+            Image.asset(WOMENTSHIRT2, height: 56, width: 42),
+            SizedBox(width: 10),
+            Image.asset(WOMENTSHIRT3, height: 56, width: 42),
+            SizedBox(width: 10),
+            Image.asset(WOMENTSHIRT4, height: 56, width: 42),
+          ],
+        ),
+        SizedBox(height: 10),
+        Text('Size  :  XL',
+            style: TextStyle(fontWeight: FontWeight.w600)),
+        SizedBox(height: 10),
+        Row(
+          children: [
+            SizeContainer('M', false),
+            SizeContainer('L', false),
+            SizeContainer('XL', true),
+            SizeContainer('XXL', false),
+          ],
+        ),
+        SizedBox(height: 10),
+        Text('In Stock',
+            style: TextStyle(color: Colors.green, fontSize: 12, fontWeight: FontWeight.w600)),
+        Row(
+          children: [
+            Text('Sold by',
+                style: TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.w400)),
+            SizedBox(width: 5),
+            Text("Patel Brother's",
                 style: TextStyle(color: Colors.red[900])),
           ],
         ),

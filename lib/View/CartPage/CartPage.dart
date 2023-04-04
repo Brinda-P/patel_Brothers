@@ -23,16 +23,12 @@ class _CartPageState extends State<CartPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Column(
-                  children: [
-                    CartTotal(),
-                    cartitem('CartPage'),
-                    BuildTopOffers(),
-                    CouponDetail(),
-                    PaymentDetail(),
-                    PlaceOrderMakePayment('PlaceOrder'),
-                  ],
-              )
+              CartTotal(),
+              cartitem('CartPage'),
+              BuildTopOffers(),
+              CouponDetail(),
+              PaymentDetail(),
+              PlaceOrderMakePayment('PlaceOrder')
             ],
           ),
         ),

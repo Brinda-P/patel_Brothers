@@ -73,7 +73,7 @@ ListView cartitem(String PageName){
                           if(ItemDetailList[index].SoldBy != '')Text('Sold by ${ItemDetailList[index].SoldBy}', style: TextStyle(fontSize: 10)),
                           SizedBox(height: 5),
                           if(PageName.toUpperCase() == 'CARTPAGE')AddRemoveFromCart(),
-                          if(PageName.toUpperCase() == 'DELIVERYPAGE')DeliveryDate(ItemDetailList[index].Price, ItemDetailList[index].Price)
+                          if(PageName.toUpperCase() == 'DELIVERYPAGE')DeliveryDate(ItemDetailList[index].DeliveryFromDate!, ItemDetailList[index].DeliveryToDate!)
 
                         ],
                       ),
@@ -238,7 +238,6 @@ Container PlaceOrderMakePayment(String Type){
             },
             child:
                 Text(Type.toUpperCase() == 'PLACEORDER' ? 'Place Order' : 'Make Payment', style: TextStyle(color: Colors.white),)
-
           )
 
         )

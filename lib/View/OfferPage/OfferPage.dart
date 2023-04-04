@@ -26,6 +26,7 @@ class _offerpageState extends State<offerpage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                     Text('250 Products Available', style: TextStyle(fontStyle: FontStyle.italic, fontSize: 10),),
+
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 5),
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.white),
@@ -41,6 +42,7 @@ class _offerpageState extends State<offerpage> {
                 ],
               ),
             ),
+            ProductCategory(),
             OfferItems()
           ],
         ),

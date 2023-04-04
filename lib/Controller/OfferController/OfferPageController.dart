@@ -133,7 +133,7 @@ ListView OfferItems() {
                           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                           decoration: BoxDecoration(
                               color: AppColors.THEME_COLOR,
-                              borderRadius: BorderRadius.circular(10)
+                              borderRadius: BorderRadius.circular(15)
                           ),
                           child: Row(
                             children: [
@@ -161,6 +161,34 @@ ListView OfferItems() {
     ),
       );
   },);
+}
+
+Container ProductCategory(){
+  return Container(
+    height: 40.h,
+    padding: EdgeInsets.all(10),
+    child: ListView(
+      scrollDirection: Axis.horizontal,
+      children: [
+        PTypeNameContainer('All',true),
+        PTypeNameContainer('Herbal & Ayurvedic',false),
+        PTypeNameContainer('Makeup Accessories',false),
+        PTypeNameContainer('Health Supplements',false),
+      ],
+  ),
+  );
+}
+
+Container PTypeNameContainer(TypeName,bool isSelected){
+  return Container(
+    padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+    margin: EdgeInsets.only(right: 5),
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: isSelected ? AppColors.THEME_COLOR : Colors.grey[300]
+    ),
+    child: Text(TypeName, style: TextStyle(color: isSelected ? Colors.white : Colors.black, fontSize: 10),),
+  );
 }
 
 class PCCategory{
